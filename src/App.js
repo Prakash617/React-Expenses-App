@@ -1,23 +1,43 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import ExpenseItem from './components/ExpenseItem';
+// import ExpenseDate from './components/ExpenseDate';
+import Expense from './components/Expense';
+
 
 function App() {
+  let expense = [{
+    id : '1',
+    title : 'school',
+    amount : 250,
+    date : new Date(2022,2,12)
+  },
+  {
+    id : '2',
+    title : 'collage',
+    amount : 600,
+    date : new Date(2024,2,12)
+  },
+  {
+    id : '3',
+    title : 'tu',
+    amount : 23,
+    date : new Date(2032,2,12)
+  },
+  {
+    id : '4',
+    title : 'any',
+    amount : 24,
+    date : new Date(2032,2,12)
+  }
+]
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Let's start</h1>
+        {/* <ExpenseDate/> */}
+        <Expense item = { expense }/>
+        
+        
     </div>
   );
 }
